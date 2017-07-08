@@ -9,6 +9,5 @@ export default (
   <Route path="/" component={App}>
     <IndexRoute component={Greetings} /> 
     <Route path="account" component={AccountNav}/>
-
   </Route>
 )

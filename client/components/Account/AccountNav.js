@@ -1,45 +1,46 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid, Image, Menu } from 'semantic-ui-react'
 
 class AccountNav extends Component {
   render () {
     return (
       <div>
       
-        <div className="display">
-        
-         
-        </div>
+      
         <Grid celled>
-    <Grid.Row>
-      <Grid.Column width={3}>
-         <Link className="">My Account</Link>
-          <Link>Account Details</Link>
-          <Link>Billing Details</Link>
-          <Link>Delivery Schedule</Link>
-          <Link>Manage Subscription</Link>
-          <Link>Refer Friends</Link>
-      </Grid.Column>
-      <Grid.Column width={13}>
-        <Image src='/assets/images/wireframe/centered-paragraph.png' />
-      </Grid.Column>
-    </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={4}>
+            <Menu color={"teal"} vertical>
+              <Menu.Item header as={Link} to='/'>Imperfect Produce</Menu.Item>
+              <Menu.Item>My Account</Menu.Item>
+                <Menu.Item>Account Details</Menu.Item>
+                <Menu.Item>Billing Details</Menu.Item>
+                <Menu.Item>Delivery Schedule</Menu.Item>
+                <Menu.Item>Manage Subscription</Menu.Item>
+                <Menu.Item>Refer Friends</Menu.Item>
+            </Menu>
+          </Grid.Column>
+          
+          <Grid.Column width={12}>
+            <Image src='/assets/images/wireframe/centered-paragraph.png' />
+          </Grid.Column>
+        </Grid.Row>
 
-    <Grid.Row>
-      <Grid.Column width={3}>
-        <Image src='/assets/images/wireframe/image.png' />
-      </Grid.Column>
-      <Grid.Column width={10}>
-        <Image src='/assets/images/wireframe/paragraph.png' />
-      </Grid.Column>
-      <Grid.Column width={3}>
-        <Image src='/assets/images/wireframe/image.png' />
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-       
+        <Grid.Row>
+          <Grid.Column width={3}>
+            <Image src='/assets/images/wireframe/image.png' />
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <Image src='/assets/images/wireframe/paragraph.png' />
+          </Grid.Column>
+          <Grid.Column width={3}>
+            <Image src='/assets/images/wireframe/image.png' />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+          
 
       <div className="display">
         
