@@ -8,7 +8,9 @@ class App extends React.Component {
     return (
       <div>
         <NavigationBar />
-        {this.props.children}
+        <Container>
+           {this.props.children}
+        </Container>
         <Footer />
       </div>
     );

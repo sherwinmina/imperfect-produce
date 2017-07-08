@@ -17,7 +17,10 @@ class NavigationBar extends Component {
         <Menu>
           <Menu.Item header as={Link} to='/'>Imperfect Produce</Menu.Item>
           <Menu.Item header as={Link} to='/account'>My Account</Menu.Item>
-          <Menu.Item header as={Link} to='/logout'>Logout</Menu.Item>
+          <Menu.Item header as={Link} to='/About'>About</Menu.Item>
+          <Menu.Item header as={Link} to='/FAQ'>FAQ</Menu.Item>
+          <Menu.Item header as={Link} to='/Contact'>Contact</Menu.Item>
+          <Menu.Item header as={Link} to='/Signin'>Sign in</Menu.Item>
           <Menu.Item name='jobs' active={activeItem === 'jobs'} onClick={this.handleItemClick} />
           <Menu.Item name='locations' active={activeItem === 'locations'} onClick={this.handleItemClick} />
         </Menu>
