@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import { } from 'semantic-ui-react'
 
-class Signin extends Component {
+class Signup extends Component {
   render () {
     return (
       <div>
-        
+        Sign up
       </div>
     )
   }
 }
 
-export default Signin;
+export default Signup;
