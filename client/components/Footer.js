@@ -23,6 +23,11 @@ class Footer extends Component {
           </Grid.Column>
           <Grid.Column width={3}>
             <h5>The weekly Beet</h5>
+            <a href="http://www.blog.imperfectproduce.com/blog-1/2017/7/6/what-do-i-cook-with-that">
+              <p>How to cook Romanesco Cauliflower</p>
+            </a>
+            
+            <img src="https://www.jungseed.com/PIF/01733/JungSeed.jpg" alt="Smiley face" height="60" width="60"/>
           </Grid.Column>
 
         </Grid.Row>
@@ -43,13 +48,13 @@ class Footer extends Component {
             <h5>Information</h5>
             <p><Link to='/About'> About</Link></p>
             <p><Link to='/Contact'>Contact</Link></p>
-            <p><Link>Jobs</Link></p>
+            <p><Link to='/Jobs'>Jobs</Link></p>
           </Grid.Column>
 
           <Grid.Column>
             <h5>Help</h5>
-            <p><Link>Customer Support</Link></p>
-            <p><Link>FAQ</Link></p>
+            <p><Link to='/Contact'>Customer Support</Link></p>
+            <p><Link to='FAQ'>FAQ</Link></p>
           </Grid.Column>
           </Grid.Row>
           

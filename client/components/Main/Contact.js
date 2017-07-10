@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const Contact = () => (
  <div>  
-  <h2>WE’RE EXCITED TO HEAR FROM YOU!</h2>
+  <h2 style={{textAlign: 'center', paddingBottom: '40px'}}>WE’RE EXCITED TO HEAR FROM YOU!</h2>
 
   <h3>WE’RE ALWAYS OPEN TO SUGGESTIONS ON WAYS WE CAN MAKE OUR CUSTOMERS EVEN HAPPIER.</h3>
  
