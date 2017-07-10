@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
-import { Container, Grid, Image, Input, Divider, Icon } from 'semantic-ui-react'
+import {Link} from 'react-router';
+import { Container, Grid, Image, Input, Divider, Icon, Segment } from 'semantic-ui-react';
 
 class Footer extends Component {
   render () {
     return (
       <Container>
-      <Grid columns={3}>
-       <Divider></Divider>
-       
+      <Divider></Divider>
+
+      <Grid stackable columns={3} padded>
         <Grid.Row>
-        <Grid.Column  mobile={16} tablet={8} computer={4}>
-            <h5>Follow Us</h5>
+        <Grid.Column width={4} >
+            <h4 style={{color:'teal'}}>Follow Us</h4>
             <Icon  name='facebook square' size='large' color="teal" />
             <Icon name='twitter' size='large' color="teal" />
             <Icon name='pinterest' size='large' color="teal"/>
             <Icon name='instagram' size='large' color="teal"/>
           </Grid.Column>
-          <Grid.Column  mobile={16} tablet={8} computer={4}>
-                    <Input action={{content: 'Subscribe', color:'teal'}} placeholder='example@gmail.com' />
+
+          <Grid.Column width={7} >
+              <Input action={{content: 'Subscribe', color:'teal'}} placeholder='example@gmail.com' />
           </Grid.Column>
-          <Grid.Column mobile={16} tablet={8} computer={8}>
+          <Grid.Column width={3}>
             <h5>The weekly Beet</h5>
           </Grid.Column>
+
         </Grid.Row>
+        <Divider></Divider>
+      </Grid>
 
-          <Divider></Divider>
-
+      <Grid columns={3} padded>
         <Grid.Row>
           
           <Grid.Column>
@@ -37,21 +41,22 @@ class Footer extends Component {
          
           <Grid.Column>
             <h5>Information</h5>
-            <p>About</p>
-            <p>Contact</p>
-            <p>Jobs</p>
+            <p><Link> About</Link></p>
+            <p><Link>Contact</Link></p>
+            <p><Link>Jobs</Link></p>
           </Grid.Column>
 
           <Grid.Column>
             <h5>Help</h5>
-            <p>Customer Support</p>
-            <p>FAQ</p>
+            <p><Link>Customer Support</Link></p>
+            <p><Link>FAQ</Link></p>
           </Grid.Column>
-        </Grid.Row>
-        <Divider></Divider>
-         <Grid.Row>
-        <p>imperfect Foods, inc 2017. All Rights Reserve.</p>
-         </Grid.Row>
+          </Grid.Row>
+          
+          <Divider></Divider>
+          <Grid.Row>
+          <p>Imperfect Foods, inc 2017. All Rights Reserve.</p>
+          </Grid.Row>
       </Grid>
       </Container>
     )
