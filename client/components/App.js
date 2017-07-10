@@ -8,9 +8,9 @@ class App extends React.Component {
     return (
       <div>
         <NavigationBar />
-        <Container style={{paddingTop: '30px', paddingBottom: '20px'}}>
+        <div style={{paddingTop: '30px', paddingBottom: '20px'}}>
            {this.props.children}
-        </Container>
+        </div>
         <Footer />
       </div>
     );
