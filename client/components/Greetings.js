@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Image, Button, Grid} from 'semantic-ui-react';
+import { Container, Image, Button, Grid, Segment } from 'semantic-ui-react';
 
 class Greetings extends React.Component {
   render() {
@@ -20,23 +20,26 @@ class Greetings extends React.Component {
           </Grid>
           </Container>
         </div>
-
+         
          <div className='imageContainer' 
             style={{ height: '500px',backgroundImage: `url(${picture2})` }}>
           <Container style={{paddingTop:'50px'}}>
           <Grid>
-            <Grid.Column computer={8} mobile={16}>
-             <Grid.Row centered columns={2} >
-              <Grid.Column>
-              <h1>4.4M</h1>
-              <h5>POUNDS OF FOOD SAVE</h5>
-              </Grid.Column>
-              <h1>4.4M</h1>
-              <h5>POUNDS OF FOOD SAVE</h5>
-              <h1>4.4M</h1>
-              <h5>POUNDS OF FOOD SAVE</h5>
-            </Grid.Row>
-            </Grid.Column>
+            <Segment.Group horizontal>
+              <Segment>
+                <h1>4.4M</h1>
+                <h5>POUNDS OF FOOD SAVE</h5>
+                <h1>$2.0M</h1>
+                <h5>DOLLARS SAVED ON GROCERIES</h5>
+              </Segment>
+              <Segment>
+                <h1>220M</h1>
+                <h5>GALLONS OF WATER SAVED</h5>
+                <h1>15M</h1>
+                <h5>POUNDS OF CO2 SAVED</h5>
+              </Segment>
+            </Segment.Group>
+            
 
             <Grid.Column floated='right' computer={5} mobile={16}>
               <h1>Our community is changing the world!</h1>
