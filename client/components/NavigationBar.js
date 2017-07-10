@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-import { Menu, Tab } from 'semantic-ui-react'
+import { Menu, Segment } from 'semantic-ui-react'
 
 class NavigationBar extends Component {
   constructor(props) {
     super(props);
-     this.state = {};
+     this.state = {activeItem: 'About'};
   }
 
+  handleItemClick(e, {name}) {
+    e.preventDefault();
+    this.setState({ activeItem: name });
+  }
   // handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
@@ -17,7 +21,7 @@ class NavigationBar extends Component {
         <Menu>
           <Menu.Item header as={Link} to='/'><img src="http://sfghwellness.org/wp-content/uploads/2012/08/Imperfect-Produce.png" alt=""/></Menu.Item>
           <Menu.Item header as={Link} to='/account'>My Account</Menu.Item>
-          <Menu.Item header as={Link} to='/About'>About</Menu.Item>
+          <Menu.Item name='About' header active={activeItem === 'About'} as={Link} to='/About' onClick={this.handleItemClick}/>
           <Menu.Item header as={Link} to='/FAQ'>FAQ</Menu.Item>
           <Menu.Item header as={Link} to='/Contact'>Contact</Menu.Item>
           <Menu.Item header as={Link} to='/Signup'>Sign up</Menu.Item>
