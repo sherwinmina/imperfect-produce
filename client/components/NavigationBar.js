@@ -15,7 +15,7 @@ class NavigationBar extends Component {
     return (
       <div >
         <Menu>
-          <Menu.Item header as={Link} to='/'>Imperfect Produce</Menu.Item>
+          <Menu.Item header as={Link} to='/'><img src="http://sfghwellness.org/wp-content/uploads/2012/08/Imperfect-Produce.png" alt=""/></Menu.Item>
           <Menu.Item header as={Link} to='/account'>My Account</Menu.Item>
           <Menu.Item header as={Link} to='/About'>About</Menu.Item>
           <Menu.Item header as={Link} to='/FAQ'>FAQ</Menu.Item>
