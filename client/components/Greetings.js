@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Image, Button, Grid, Segment } from 'semantic-ui-react';
+import { Container, Image, Button, Grid, Segment, Embed } from 'semantic-ui-react';
+
 
 class Greetings extends React.Component {
   render() {
@@ -55,6 +56,12 @@ class Greetings extends React.Component {
           </Grid>
           </Container>
         </div>
+
+        <Embed
+          id='Gi4iSrdlOXk'
+          placeholder='https://biohomecares.com/wp-content/uploads/imperfects_images_from_Uli-1.jpg'
+          source='youtube'
+        />
         
       </Container>
     );
