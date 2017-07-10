@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-import { Menu } from 'semantic-ui-react'
+import { Menu, Tab } from 'semantic-ui-react'
 
 class NavigationBar extends Component {
   constructor(props) {
