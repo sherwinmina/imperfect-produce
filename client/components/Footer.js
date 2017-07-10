@@ -41,8 +41,8 @@ class Footer extends Component {
          
           <Grid.Column>
             <h5>Information</h5>
-            <p><Link> About</Link></p>
-            <p><Link>Contact</Link></p>
+            <p><Link to='/About'> About</Link></p>
+            <p><Link to='/Contact'>Contact</Link></p>
             <p><Link>Jobs</Link></p>
           </Grid.Column>
 
