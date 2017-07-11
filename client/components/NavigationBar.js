@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-import { Menu, Segment, Dropdown, Button } from 'semantic-ui-react'
+import { Menu, Segment, Dropdown, Button } from 'semantic-ui-react';
+
+import LoginModal from './Main/Login';
+
 
 class NavigationBar extends Component {
   constructor(props) {
@@ -29,7 +32,7 @@ class NavigationBar extends Component {
           <Menu.Menu position='right'>
             <Menu.Item name='jobs' active={activeItem === 'jobs'} onClick={this.handleItemClick.bind(this)} />
             <Menu.Item><Button color='orange' as={Link} to='/Signup'>Sign Up</Button></Menu.Item>
-            <Menu.Item><Button  color='orange' as={Link} to='/Login'>Log In</Button></Menu.Item>
+            <Menu.Item> <LoginModal/> </Menu.Item>
           </Menu.Menu> 
          
         </Menu>

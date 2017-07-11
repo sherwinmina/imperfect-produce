@@ -11,7 +11,6 @@ import About from './components/Main/About.js';
 import Contact from './components/Main/Contact.js';
 import FAQ from './components/Main/FAQ.js';
 import Signup from './components/Main/Signup.js';
-import Login from './components/Main/Login.js';
 import Jobs from './components/Main/Jobs.js';
 
 export default (
@@ -21,7 +20,6 @@ export default (
     <Route path="Contact" component={Contact}/>
     <Route path="FAQ" component={FAQ}/>
     <Route path="Signup" component={Signup}/>
-    <Route path="Login" component={Login}/>
     <Route path="Jobs" component={Jobs}/>
 
     <Route path="account" component={AccountNav}/>

@@ -1,24 +1,44 @@
 import React, { Component } from 'react';
-import { Container, Card, Icon, Button, Form, Input, Checkbox, Header, Image, Modal } from 'semantic-ui-react'
+import { Container, Card, Icon, Button, Form, Input, Checkbox, Header, Image, Confirm } from 'semantic-ui-react'
 
 class Login extends Component {
-  render () {
+  constructor(props){
+    super(props)
+
+    this.state = { open: false };
+
+    this.show = this.show.bind(this);
+    this.handleConfirm = this.handleConfirm.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
+  }
+  
+  show() {
+    this.setState({ open: true });
+  }
+
+  handleConfirm () {
+    this.setState({ open: false });
+  }
+  
+  handleCancel() {
+    this.setState({ open: false });
+  }
+
+  render() {
     return (
       <div>
-       <Modal trigger={<Button>Show Modal</Button>}>
-          <Modal.Header>Select a Photo</Modal.Header>
-          <Modal.Content image>
-            <Image wrapped size='medium' src='/assets/images/avatar/large/rachel.png' />
-            <Modal.Description>
-              <Header>Default Profile Image</Header>
-              <p>We've found the following gravatar image associated with your e-mail address.</p>
-              <p>Is it okay to use this photo?</p>
-            </Modal.Description>
-          </Modal.Content>
-        </Modal>
-       
+        <Button size='large' color='orange' onClick={this.show}>Log In</Button>
+        <Confirm
+          open={this.state.open}
+          content='Login To yoir account'
+          cancelButton='Cancel'
+          confirmButton="Log In"
+          header='Login To Your Account'
+          onCancel={this.handleCancel}
+          onConfirm={this.handleConfirm}
+        />
       </div>
-    )
+    );
   }
 }
 

@@ -10,7 +10,7 @@ class Signup extends Component {
           
               <Segment>
                <Container>
-                <h3>Log in</h3>
+                <h3>Sign Up</h3>
                 <Form>
                   <Form.Field>
                     <label>Email</label>
