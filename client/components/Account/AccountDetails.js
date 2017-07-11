@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Deatils extends Component {
+class Details extends Component {
   render () {
     return (
       <div>
@@ -10,4 +10,4 @@ class Deatils extends Component {
   }
 }
 
-export default Deatils
+export default Details;
