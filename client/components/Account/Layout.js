@@ -8,13 +8,13 @@ class Layout extends Component {
   render () {
     return (
       <Container fluid>  
-        <Grid celled stackable>
+        <Grid celled='internally' >
         <Grid.Row columns={2} >
-          <Grid.Column mobile={16} tablet={5} computer={4}>
+          <Grid.Column mobile={16} tablet={5} computer={4} style={{backgroundColor:'royalBlue'}}>
            <AccountNav/>
           </Grid.Column>
           
-          <Grid.Column mobile={16} tablet={11} computer={12}>
+          <Grid.Column mobile={16} tablet={11} computer={12}  style={{backgroundColor:'lightGrey'}}>
              {this.props.children}
           </Grid.Column>
         </Grid.Row>

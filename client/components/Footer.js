@@ -5,7 +5,7 @@ import { Container, Grid, Image, Input, Divider, Icon, Segment } from 'semantic-
 class Footer extends Component {
   render () {
     return (
-      <Container>
+      <div>
       <Divider></Divider>
 
       <Grid stackable columns={3} padded>
@@ -19,6 +19,7 @@ class Footer extends Component {
           </Grid.Column>
 
           <Grid.Column width={7} >
+            <h5>Don't Miss a Beet, Sign up for our News Letter.</h5>
               <Input action={{content: 'Subscribe', color:'teal'}} placeholder='example@gmail.com' />
           </Grid.Column>
           <Grid.Column width={3}>
@@ -63,7 +64,7 @@ class Footer extends Component {
           <p>Imperfect Foods, inc 2017. All Rights Reserve.</p>
           </Grid.Row>
       </Grid>
-      </Container>
+      </div>
     )
   }
 }

@@ -19,7 +19,7 @@ class AccountNav extends Component {
     const { activeItem } = this.state;
 
     return (
-        <Menu fluid color='teal' inverted  vertical>
+        <Menu fluid color='teal'  vertical>
           <Menu.Item name='MyAccount' active={activeItem === 'MyAccount'} header as={Link} to='MyAccount'  onClick={this.handleItemClick}>
               <Link to='/MyAccount'><Icon name='home' />My Account</Link>
             </Menu.Item>

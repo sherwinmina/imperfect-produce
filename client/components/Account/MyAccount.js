@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Image, Container, Advertisement, Card, Icon, Form, Button, TextArea } from 'semantic-ui-react';
+import { Input,  Grid, Image, Container, Advertisement, Card, Icon, Form, Button, TextArea } from 'semantic-ui-react';
 
 class MyAccount extends Component {
   render () {
@@ -36,7 +36,7 @@ class MyAccount extends Component {
                 <h5>Or use this link to invite your friends:</h5>
                
                 <Form style={{paddingBottom: '10px'}}>
-                  <TextArea autoHeight placeholder='https://www.imperfectproduce.com/register.php?referral=96774' rows={1} />
+                  <Input placeholder='https://www.imperfectproduce.com/register.php?referral=96774'/>
                 </Form>
                 <Button color='facebook'>
                   <Icon name='facebook' /> Share

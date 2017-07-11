@@ -8,7 +8,7 @@ import LoginModal from './Main/Login';
 class NavigationBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {activeItem: 'About'};
+    this.state = {activeItem: ''};
     
     this.handleItemClick = this.handleItemClick.bind(this)
   }
@@ -22,9 +22,9 @@ class NavigationBar extends Component {
     const { activeItem } = this.state
     return (
       <div >
-        <Menu inverted color='blue' pointing secondary  size='huge' style={{height:'80px'}}>
+        <Menu color='blue' pointing secondary  size='huge' style={{height:'120px'}}>
           <Menu.Item header as={Link} to='/'>
-            <img src="http://sfghwellness.org/wp-content/uploads/2012/08/Imperfect-Produce.png" alt=""/>
+            <img src="http://sfghwellness.org/wp-content/uploads/2012/08/Imperfect-Produce.png" alt="" style={{height:'100px', width:'100px'}}/>
           </Menu.Item>
 
           <Menu.Item name='account' active={activeItem === 'account'} header as={Link} to='/account' onClick={this.handleItemClick}>
@@ -41,9 +41,11 @@ class NavigationBar extends Component {
           </Menu.Item>
          
           <Menu.Menu position='right'>
-            <Menu.Item name='jobs' active={activeItem === 'jobs'} onClick={this.handleItemClick} />
-            <Menu.Item><Button color='orange' as={Link} to='/Signup'onClick={this.handleItemClick}>Sign Up</Button></Menu.Item>
-            <Menu.Item> <LoginModal/> </Menu.Item>
+            <Menu.Item name='jobs' active={activeItem === 'jobs'} onClick={this.handleItemClick} >
+              <Link to='jobs'>Jobs</Link>
+            </Menu.Item>
+            <Menu.Item><Button color='pink' as={Link} to='/Signup'>Sign Up</Button><LoginModal/> </Menu.Item>
+            <Menu.Item> </Menu.Item>
           </Menu.Menu> 
          
         </Menu>
