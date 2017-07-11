@@ -1,32 +1,25 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 
-import { Grid, Image, Menu } from 'semantic-ui-react';
+import { Grid, Image, Menu, Container} from 'semantic-ui-react';
 import AccountNav from './AccountNav';
 
 class Layout extends Component {
   render () {
     return (
-      <div>  
-        <Grid celled>
-        <Grid.Row>
-          <Grid.Column width={4}>
+      <Container fluid>  
+        <Grid celled stackable>
+        <Grid.Row columns={2} >
+          <Grid.Column mobile={16} tablet={5} computer={4}>
            <AccountNav/>
           </Grid.Column>
           
-          <Grid.Column width={12}>
+          <Grid.Column mobile={16} tablet={10} computer={4}>
              {this.props.children}
           </Grid.Column>
         </Grid.Row>
-
-        
-      </Grid>
-          
-
-      <div className="display">
-        
-       </div>
-      </div>
+        </Grid>
+      </Container>
     )
   }
 }

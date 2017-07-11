@@ -18,6 +18,7 @@ import Billing from './components/Account/Billing';
 import Delivery from './components/Account/Delivery';
 import ManageSubscription from './components/Account/ManageSubscription';
 import Refer from './components/Account/Refer';
+import MyAccount from './components/Account/MyAccount';
 
 
 export default (
@@ -30,7 +31,9 @@ export default (
     <Route path="Jobs" component={Jobs}/>
 
     <Route path="account" component={Layout}>
-      <IndexRoute path="/AccountDetail" component={AccountDetail}/>
+      <IndexRoute path="/MyAccount" component={MyAccount}/>
+      <Route path="/MyAccount" component={MyAccount}/>
+      <Route path="/AccountDetail" component={AccountDetail}/>
       <Route path="/Billing" component={Billing}/>
       <Route path="/Delivery" component={Delivery}/>
       <Route path="/ManageSubscription" component={ManageSubscription}/>
