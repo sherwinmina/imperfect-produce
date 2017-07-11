@@ -1,42 +1,38 @@
 import React, { Component } from 'react';
-import { Container, Card, Icon, Button, Form, Input, Checkbox, Header, Image, Confirm } from 'semantic-ui-react'
+import {Link} from 'react-router'
+import { Container, Card, Button, Form, Input, Checkbox, Header, Image, Modal, Icon} from 'semantic-ui-react'
 
 class Login extends Component {
-  constructor(props){
-    super(props)
-
-    this.state = { open: false };
-
-    this.show = this.show.bind(this);
-    this.handleConfirm = this.handleConfirm.bind(this);
-    this.handleCancel = this.handleCancel.bind(this);
-  }
-  
-  show() {
-    this.setState({ open: true });
-  }
-
-  handleConfirm () {
-    this.setState({ open: false });
-  }
-  
-  handleCancel() {
-    this.setState({ open: false });
-  }
-
+ 
   render() {
     return (
       <div>
-        <Button size='large' color='orange' onClick={this.show}>Log In</Button>
-        <Confirm
-          open={this.state.open}
-          content='Login To yoir account'
-          cancelButton='Cancel'
-          confirmButton="Log In"
-          header='Login To Your Account'
-          onCancel={this.handleCancel}
-          onConfirm={this.handleConfirm}
-        />
+        <Modal trigger={<Button size='large' color='orange'>Login</Button>} closeIcon='close'>            
+          <Header icon='user' content='Log In To Your Account' />
+          <Modal.Content>
+           <Form style={{paddingBottom: '20px'}}>
+            <Form.Field>
+                <label>Email</label>
+                <input placeholder='Yourname@gmail.com' />
+              </Form.Field>
+              <Form.Field>
+                <label>Password</label>
+                <input placeholder='Password' />
+              </Form.Field>
+            </Form>
+            <Checkbox label='Remeber me'/><Link style={{float: 'right'}}>Forgot your Password?</Link>
+
+          </Modal.Content>
+          <Modal.Actions>
+            Not a member yet? <Link to='/Signup'>Sign up</Link>
+            <Button color='red'>
+              Cancel
+            </Button>
+            <Button primary onClick={this.close} >
+              Log In
+            </Button>
+          </Modal.Actions>
+        </Modal>
       </div>
     );
   }

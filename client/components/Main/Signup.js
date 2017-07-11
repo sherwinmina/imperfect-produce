@@ -5,9 +5,8 @@ class Signup extends Component {
   render () {
     return (
       <div>
-        <Grid centered columns={4} padded>
-          <Grid.Column>
-          
+        <Grid centered columns={2} padded>
+          <Grid.Column mobile={12} tablet={6} computer={6}>
               <Segment>
                <Container>
                 <h3>Sign Up</h3>
