@@ -14,7 +14,7 @@ class Layout extends Component {
            <AccountNav/>
           </Grid.Column>
           
-          <Grid.Column mobile={16} tablet={10} computer={4}>
+          <Grid.Column mobile={16} tablet={11} computer={12}>
              {this.props.children}
           </Grid.Column>
         </Grid.Row>
