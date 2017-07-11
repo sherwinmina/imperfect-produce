@@ -4,7 +4,7 @@ class Delivery extends Component {
   render () {
     return (
       <div>
-        Delivery Schedule
+        <h1> Delivery Schedule</h1>
       </div>
     )
   }

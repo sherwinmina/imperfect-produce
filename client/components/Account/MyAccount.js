@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
-
 import { Grid, Image, Container, Advertisement, Card, Icon, Form, Button, TextArea } from 'semantic-ui-react';
 
 class MyAccount extends Component {
   render () {
     return (
       <div>
-       <Advertisement unit='top banner' test='Vertical Banner' />
+       <Advertisement fluid unit='top banner' test='Vertical Banner' />
 
-        <Grid colums='equal' style={{paddingTop: '30px'}}>
-          <Grid.Row colums={2}>
-          <Grid.Column   mobile={8} tablet={8} computer={8}>
-            <Card>
+        <Grid colums={3} style={{paddingTop: '30px'}}>
+          <Grid.Row colums={3}>
+          
+          <Grid.Column   mobile={8} tablet={6} computer={6}>
+            <Card fluid>
               <Card.Content header='Your next box will be deleivered on:' />
                 <Card.Content> <h1 style={{color: 'red'}}>Wednesday, July 19</h1> </Card.Content>
                  <Card.Content> <p style={{color: 'teal'}}>Organic Produce</p> <p>medium</p> </Card.Content>
                 <Card.Content extra>
-                You can customize your box from 3pm on Friday, July 14 until 9PM on Sunday, July 0. We know, it’s hard to wait!
+                You can customize your box from 3pm on Friday, July 16 until 9PM on Sunday, July 0. We know, it’s hard to wait!
                 </Card.Content>
             </Card>
           </Grid.Column>
-          <Grid.Column  mobile={8} tablet={8} computer={8}>
-           
-            <Card>
+
+
+          <Grid.Column  mobile={8} tablet={6} computer={6}>
+            <Card fluid>
               <Card.Content> <h1 style={{color: 'RoyalBlue'}}>Give $10, Get $10!</h1> </Card.Content>
               <Card.Content> 
                 <h5 style={{color: 'grey'}}>You and a friend each get $10 in Imperfect credit when they sign up using your personalized referral link</h5> 
@@ -44,25 +45,25 @@ class MyAccount extends Component {
                   <Icon name='twitter' />Tweet
                 </Button>
               </Card.Content>
-            </Card>
-            
+            </Card>      
           </Grid.Column>
+
           
-          </Grid.Row>
-        </Grid>
 
+          
+
+          <Grid.Column  mobile={8} tablet={4} computer={4}>
+             <Card>
+               <Card.Content> <h1 style={{color: 'RoyalBlue'}}>You make an impact with each box!</h1> </Card.Content>
+              <Card.Content description='You are a big deal in the mission to stop food waste! Check out your progress and see how each box adds up. Every bit counts!' />
+              <Card.Content>
+                <h5>You've saved:</h5>
+              </Card.Content>
+            </Card>
+          </Grid.Column>
            
-        <Card>
-          <Card.Content header='About Amy' />
-          <Card.Content description='Hello there' />
-          <Card.Content extra>
-            <Icon name='user' />
-            4 Friends
-          </Card.Content>
-        </Card>
-
-        
-        
+          </Grid.Row>
+        </Grid>        
       </div>
     )
   }
