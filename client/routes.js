@@ -15,7 +15,9 @@ import Jobs from './components/Main/Jobs.js';
 import Layout from './components/Account/Layout';
 import AccountDetail from './components/Account/AccountDetails';
 import Billing from './components/Account/Billing';
-import Delivery from './components/Account/DeliverySchedule';
+import Delivery from './components/Account/Delivery';
+import ManageSubscription from './components/Account/ManageSubscription';
+import Refer from './components/Account/Refer';
 
 
 export default (
@@ -28,9 +30,11 @@ export default (
     <Route path="Jobs" component={Jobs}/>
 
     <Route path="account" component={Layout}>
-      <Route path="/AccountDetail" component={AccountDetail}/>
+      <IndexRoute path="/AccountDetail" component={AccountDetail}/>
       <Route path="/Billing" component={Billing}/>
       <Route path="/Delivery" component={Delivery}/>
+      <Route path="/ManageSubscription" component={ManageSubscription}/>
+      <Route path="/Refer" component={Refer}/>
     </Route>
   </Route>
 )
