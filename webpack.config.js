@@ -1,15 +1,15 @@
-import path from 'path'
-import webpack from 'webpack';
+const path = require('path');
+const webpack  = require('webpack');
 
-export default {
+module.exports = {
   devtools: 'eval-source-map',
   entry: [
-    'webpack-hot-middleware/client',
     path.join(__dirname, '/client/index.js')
   ],
   output: {
-    path: '/',
-    publicPath: '/'
+    path:  path.join(__dirname, 'build-prod'),
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
